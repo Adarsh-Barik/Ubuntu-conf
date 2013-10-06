@@ -150,9 +150,7 @@ Bundle 'https://github.com/sjl/gundo.vim'
 " For vim-airline
 Bundle 'bling/vim-airline'
 
-" For vim-latex-suite
-Bundle 'http://git.code.sf.net/p/vim-latex/vim-latex'
-
+" ndfd
 " For Molokoi theme
 Bundle 'https://github.com/tomasr/molokai'
 
