@@ -68,16 +68,16 @@ set number
 " Enable syntax highlighting.
 syntax on 
 
-" AUTOCOMMAND
-" autocmd {event} {pattern} {cmd}
-" automatically set the format program 'astyle' for formatting C/C++/C#/Java code
-"" autocmd BufNewFile,BufRead *.h,*.c,*.hpp,*.cpp,*.cs set formatprg=astyle\ --style=allman\ --unpad-paren\ --pad-oper\ --pad-header
-"" autocmd BufNewFile,BufRead *.java set formatprg=astyle\ --style=java\ --unpad-paren\ --pad-oper\ --pad-header
-" automatically set the format program 'tidy' for formatting HTML code
-"" autocmd BufNewFile,BufRead *.htm,*.html set formatprg=tidy
-" automatically do the syntax highlighting for arudino commands
-"" autocmd BufNewFile,BufRead *.ino setlocal filetype=arduino
-
+" Autocmd
+" F9 compile
+autocmd FileType c map <F9> :!gcc -o "%:p:r.out" "%:p" && "%:p:r.out"<CR>
+autocmd FileType cpp map <F9> :!g++ -std=c++11 -pthread -o "%:p:r.out" "%:p" && "%:p:r.out"<CR>
+autocmd FileType java map <F9> :!javac "%:p" && java -cp "%:p:h" "%:t:r"<CR>
+autocmd FileType javascript map <F9> :!nodejs "%:p"<CR>
+autocmd FileType lua map <F9> :!lua "%:p"<CR>
+autocmd FileType python map <F9> :!python "%:p"<CR>
+autocmd FileType ruby map <F9> :!ruby "%:p"<CR>
+autocmd FileType scala map <F9> :!scala "%:p"<CR>
 
 " Remove menubar
 :set guioptions-=m
@@ -110,6 +110,7 @@ Bundle 'https://github.com/gmarik/vundle'
 " For autocomplete
 "" Bundle 'https://github.com/Shougo/neocomplcache'
 Bundle 'https://github.com/Rip-Rip/clang_complete'
+"Bundle 'https://github.com/Valloric/YouCompleteMe' 
 
 " For snipmate
 Bundle 'https://github.com/msanders/snipmate.vim'
@@ -162,7 +163,7 @@ filetype plugin indent on
 " clang_complete
 
 let g:clang_use_library      = 1 " instead of calling the 'clang/clang++' tool use 'libclang' directly
-let g:clang_library_path     = '/usr/lib/llvm-3.4/lib/'
+let g:clang_library_path     = '/home/adarsh/Downloads/LLVM/clang/lib/'
 let g:clang_auto_select      = 1 " select nothing from the popup menu
 " let g:clang_complete_auto    = 0
 let g:clang_complete_copen   = 1 " open quickfix window on error
@@ -209,8 +210,10 @@ let g:airline#extensions#tabline#enabled = 1
 
 if has('gui_running')
     " set guifont=inconsolata\ Regular\ 12 " font and font-size
-    set guifont=TlwgMono\ Bold\ 11
+    "set guifont=TlwgMono\ Bold\ 11
     "set guifont=PragmataPro\ 11
+    set guifont=Courier\ 10\ Pitch\ 11
     set guioptions=aivc
 	colorscheme molokai
 endif
+
