@@ -80,10 +80,10 @@ autocmd FileType ruby map <F9> :!ruby "%:p"<CR>
 autocmd FileType scala map <F9> :!scala "%:p"<CR>
 
 " Remove menubar
-:set guioptions-=m
+set guioptions-=m
 
 " Remove toolbar
-:set guioptions-=T 
+set guioptions-=T 
 
 " Toggle menubar
 nnoremap <A-m> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR> 
@@ -204,7 +204,7 @@ nnoremap <F10>           :NERDTreeToggle <CR>
 
 
 " Vim-airline tabbar
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 
 " Gvim
 
