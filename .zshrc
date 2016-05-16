@@ -10,8 +10,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="xiong-chiamiov"
-ZSH_THEME="af-magic"
+export TERM="xterm-256color"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -32,38 +32,28 @@ ZSH_THEME="af-magic"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-#DEBIAN_PREVENT_KEYBOARD_CHANGES=yes
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump git command-not-found  battery zsh-syntax-highlighting history-substring-search colored-man)
+plugins=(autojump git command-not-found  battery history-substring-search colored-man zsh-syntax-highlighting)
 #plugins=(autojump git command-not-found  battery history-substring-search colored-man)
 #plugins=(autojump git  command-not-found  battery zsh-syntax-highlighting  colored-man)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs..
 alias c='clear'
-alias matlab='/usr/local/MATLAB/R2011a/bin/matlab'
-alias setup='python setup.py build_ext --inplace'
+#alias matlab='/usr/local/MATLAB/R2011a/bin/matlab'
 alias mpd='mpd ~/.mpdconf'
 alias nmpc='ncmpcpp'
-alias awe-suspend='dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend > /dev/null'
-alias awe-restart='dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart > /dev/null'
-alias awe-shutdown='dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop > /dev/null'
-#alias latexmkupdate="grep -l '\\documentclass' *tex | xargs latexmk -pdfps -pvc -silent"
+# check disk usage
+alias diskusage='du -hcd 1 . | egrep "M|G"'
 alias latexmkupdate='latexmk -pdfps -pvc -silent'
-alias eclipse-java='c=`pwd`; cd /home/adarsh/eclipse-java/; ./eclipse &; cd $c; unset c'
-alias eclipse-cpp='c=`pwd`; cd /home/adarsh/eclipse-cpp/; ./eclipse &; cd $c; unset c'
 
-## For proxy
-#source $ZSH/plugins/history-substring-search/history-substring-search.zsh
-#
 unsetopt correctall
 export EDITOR=vim
 
 #### Using custom directory in tex Path
-#declare -x TEXINPUTS=.:$HOME/tex_custom:
 
 # LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/lib/
