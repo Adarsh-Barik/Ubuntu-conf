@@ -47,7 +47,7 @@ alias c='clear'
 alias mpd='mpd ~/.mpdconf'
 alias nmpc='ncmpcpp'
 # check disk usage
-alias diskusage='du -hcd 1 . | egrep "M|G"'
+alias diskusage='echo "Disk space in root and home"; df -h | grep -E "home|sda3"; echo "---------------"; echo "Current Directory" ; du -hcd 1 . | egrep "M|G"'
 alias latexmkupdate='latexmk -pdfps -pvc -silent'
 
 unsetopt correctall
