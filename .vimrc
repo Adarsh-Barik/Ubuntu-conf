@@ -149,7 +149,7 @@ Plugin 'http://git.code.sf.net/p/vim-latex/vim-latex'
 Plugin 'https://github.com/tomasr/molokai'
 
 " For vim move
-Bundle 'https://github.com/matze/vim-move'
+Plugin 'https://github.com/matze/vim-move'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
