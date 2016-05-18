@@ -28,7 +28,7 @@ printf '\nInstalling powerline fonts... '
 mkdir -p ~/.fonts
 git clone ${GH_POWERLINE_FONTS} ~/git/debian-configuration-files/powerline-fonts >/dev/null 2>&1 && {
 chmod a+x ~/git/debian-configuration-files/powerline-fonts/install.sh
-./install.sh
+bash ~/git/debian-configuration-files/powerline-fonts/install.sh
 printf 'Done!\n'
 } || printf 'download FAILED!\n'
 
