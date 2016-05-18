@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # based on https://github.com/ranjanashish/debian-configuration-files
+# edited by: adarsh
 
 declare -r GH_DEB_CONFIGS=https://github.com/Adarsh-Barik/Ubuntu-conf.git
 declare -r GH_POWERLINE_FONTS=https://github.com/powerline/fonts.git
