@@ -16,12 +16,9 @@ mkdir -p ~/git
 git clone ${GH_DEB_CONFIGS} ~/git/debian-configuration-files >/dev/null 2>&1 && {
     printf 'Success!\n'
     printf 'Moving config files to appropriate places... '
-    mkdir -p ~/.config/awesome
-    # ln ~/git/debian-configuration-files/home/ashish/.config/awesome/rc.lua ~/.config/awesome/rc.lua
     ln  ~/git/debian-configuration-files/.vimrc ~/.vimrc
     ln  ~/git/debian-configuration-files/.zshrc ~/.zshrc
     ln  ~/git/debian-configuration-files/.zshenv ~/.zshenv
-    # ln -s ~/.xinitrc ~/.xsession 
     printf 'Done!\n'
 } || printf 'Failed!\n'
 
