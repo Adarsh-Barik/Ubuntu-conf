@@ -1,0 +1,44 @@
+[global_config]
+  enabled_plugins = ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, MavenPluginURLHandler, LaunchpadBugURLHandler
+  geometry_hinting = False
+  suppress_multiple_term_dialog = True
+  title_transmit_bg_color = "#251717"
+[keybindings]
+  hide_window = F12
+  split_horiz = <Primary><Alt>h
+  split_vert = <Primary><Alt>j
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[original]]
+    allow_bold = False
+    background_color = "#252e32"
+    background_darkness = 0.92
+    background_image = None
+    background_type = transparent
+    cursor_color = "#839496"
+    font = Source Code Pro for Powerline 10
+    foreground_color = "#94a3a5"
+    scrollback_infinite = True
+    use_system_font = False
+
+  [[default]]
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#ec0048:#2aa198:#94a3a5:#586e75:#cb4b16:#859900:#b58900:#268bd2:#d33682:#2aa198:#6c71c4"
+    allow_bold = True
+    background_color = "#252e32"
+    background_darkness = 0.92
+    background_image = None
+    background_type = transparent
+    cursor_color = "#839496"
+    font = Source Code Pro for Powerline 10
+    foreground_color = "#94a3a5"
+    scrollback_infinite = True
+    use_system_font = False
+    show_titlebar = False

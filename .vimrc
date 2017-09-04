@@ -57,7 +57,7 @@ set smarttab
 "" Plugins
 
 " set last status only if there are multiple windows
-set laststatus=1         
+set laststatus=2         
 
 " REQUIRED!!! by powerline
 set t_Co=256              
@@ -112,7 +112,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'https://github.com/scrooloose/nerdcommenter'
 
 " Checks for syntactic error
-Plugin 'https://github.com/scrooloose/syntastic'
+" Plugin 'https://github.com/scrooloose/syntastic'
 
 " See list of tags
 Plugin 'https://github.com/majutsushi/tagbar'
@@ -149,7 +149,10 @@ Plugin 'http://git.code.sf.net/p/vim-latex/vim-latex'
 Plugin 'https://github.com/tomasr/molokai'
 
 " For vim move
-Plugin 'https://github.com/matze/vim-move'
+" Plugin 'https://github.com/matze/vim-move'
+
+" For Julia syntax highlighting
+Plugin 'JuliaLang/julia-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -200,3 +203,4 @@ nnoremap <F10>           :NERDTreeToggle <CR>
 if has('gui_running')
 	colorscheme molokai
 endif
+set guifont=Source\ Code\ Pro\ for\ Powerline

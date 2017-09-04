@@ -1,7 +1,7 @@
 # This file is created by Adarsh (Dhabba) with the help of Oh-my-zsh..enjoy :)
 # Path to your oh-my-zsh configuration.
 #
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/media/reddragon/General/anaconda3/bin
 ZSH=$HOME/.oh-my-zsh
 
 
@@ -11,7 +11,8 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 export TERM="xterm-256color"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="awesomepanda"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -57,3 +58,8 @@ export EDITOR=vim
 
 # LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/lib/
+
+# Make terminator use dark theme
+if [[ "$TERM"=="xterm-256color" ]]; then
+    xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT "dark" -id `xprop -root | awk '/^_NET_ACTIVE_WINDOW/ {print $5}'`
+fi
